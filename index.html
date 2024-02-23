@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="my test tapsi web application" />
+		<meta name="keywords" content="HTML, CSS, JavaScript" />
+		<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+		<link rel="stylesheet" href="assets/css/fonts.css" type="text/css" />
+		<!---- google fonts ---->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+			rel="stylesheet" />
+		<!---- animate.css ---->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+		<!-- AOS  -->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+		<!---- fontawesome CDN, 2 versions ---->
+		<!-- <link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+			integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" /> -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+			integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+		<title>Tapsi demo</title>
+	</head>
+	<body>
+		<!-- ------------------------------- -->
+		<!-- ---------- NAV BAR ------------ -->
+		<!-- ------------------------------- -->
+		<header>
+			<nav class="nav">
+				<span class="nav__logo-container">
+					<svg
+						class="nav__logo"
+						xmlns="http://www.w3.org/2000/svg"
+						width="102"
+						height="22"
+						viewBox="0 0 102 22">
+						<g xmlns="http://www.w3.org/2000/svg" fill="#FF5722" fill-rule="evenodd">
+							<path
+								d="M102 5.946h-3.222v4.28H91.8v-4.28h-3.221v4.28h-5.637a1.878 1.878 0 0 1-1.879-1.872V5.946h-3.221v2.408a1.878 1.878 0 0 1-1.879 1.873 1.878 1.878 0 0 1-1.879-1.873V5.946h-3.221v2.408a1.878 1.878 0 0 1-1.879 1.873h-1.879V5.946h-3.22v4.28h-17.18v3.212h3.758v.535c0 2.656-2.167 4.816-4.831 4.816-2.664 0-4.832-2.16-4.832-4.816v-3.746H37.58v3.746c0 4.426 3.613 8.027 8.053 8.027 4.44 0 8.052-3.6 8.052-8.027v-.535H68.985a5.09 5.09 0 0 0 3.489-1.381 5.09 5.09 0 0 0 3.49 1.38 5.09 5.09 0 0 0 3.489-1.38 5.089 5.089 0 0 0 3.489 1.38H102V5.947z" />
+							<path
+								d="M84.702 19.297h3.854V22h3.304v-5.946h-7.158zM102 0h-6.561v2.973H102zM26.842 11.297H10.737V5.946h16.105zM26.842 22H0v-5.351h26.842z" />
+						</g>
+					</svg>
+				</span>
+				<div class="nav__toggler">
+					<div class="bar bar-one"></div>
+					<div class="bar bar-two"></div>
+					<div class="bar bar-three"></div>
+				</div>
+				<ul class="nav__mobile-menu">
+					<li>
+						<a href="">وبلاگ</a>
+					</li>
+					<li>
+						<a href="">فرصت های شغلی</a>
+					</li>
+					<li>
+						<a href="">خدمات کسب و کارها</a>
+					</li>
+					<li>
+						<a href="">پشتیبانی</a>
+					</li>
+				</ul>
+				<ul class="nav__desktop-menu list list--horizontal">
+					<li class="list--horizontal__item">
+						<span><a href="#">وبلاگ</a></span>
+					</li>
+					<li class="list--horizontal__item">
+						<span><a href="#">فرصت‌های شغلی</a></span>
+					</li>
+					<li class="list--horizontal__item">
+						<span><a href="#">خدمات کسب و کارها</a></span>
+					</li>
+					<li class="list--horizontal__item">
+						<span><a href="#">پشتیبانی</a></span>
+					</li>
+					<li class="list--horizontal__item">
+						<button class="btn btn--primary">دانلود تپسی</button>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<!-- ------------------------------- -->
+		<!-- -------- HERO SECTION --------- -->
+		<!-- ------------------------------- -->
+		<section class="hero-section">
+			<picture>
+				<source
+					srcset="./assets/multimedia/image/header_banner/banner.webp"
+					type="image/webp"
+					media="(min-width: 768px)" />
+				<source
+					srcset="./assets/multimedia/image/header_banner/banner.jpg"
+					type="image/jpg"
+					media="(min-width: 768px)" />
+				<source
+					srcset="./assets/multimedia/image/header_banner/banner-mobile.webp"
+					type="image/webp"
+					media="(max-width: 768px)" />
+				<source
+					srcset="./assets/multimedia/image/header_banner/banner-mobile.jpg"
+					type="image/jpg"
+					media="(max-width: 768px)" />
+				<img
+					alt="banner"
+					src="./assets/multimedia/image/header_banner/banner.jpg"
+					class="hero-section__banner" />
+			</picture>
+			<picture>
+				<source
+					srcset="./assets/multimedia/image/header_banner/mockup-phone.webp"
+					type="image/webp"
+					media="(min-width: 1024px)" />
+				<source
+					srcset="./assets/multimedia/image/header_banner/mockup-phone.png"
+					type="image/png"
+					media="(min-width: 1024px)" />
+				<img class="mockup-phone" alt="banner phone" />
+			</picture>
+			<section class="hero-wrapper container">
+				<section class="hero-container">
+					<h1>تپسی</h1>
+					<h2>اپلیکیشن درخواست خودرو و پیک</h2>
+					<div class="hero-content">
+						<div class="hero-item hero-item--white">
+							<span class="icon"><i class="fa-solid fa-arrow-down fa-sm"></i></span>
+							<p>دانلود اپلیکیشن مسافران</p>
+						</div>
+						<div class="hero-item hero-item--white">
+							<span class="icon">
+								<img src="./assets/multimedia/image/ic-pwa.svg" alt="an icon" />
+							</span>
+							<p>وب اپلیکیشن مسافران</p>
+						</div>
+						<div class="hero-item hero-item--black">
+							<span class="icon"
+								><i class="fa-solid fa-car fa-sm" style="color: #ffffff"></i
+							></span>
+							<p>ثبت نام راننده خودرو</p>
+						</div>
+						<div class="hero-item hero-item--black">
+							<span class="icon"><i class="fa-solid fa-motorcycle fa-sm"></i></span>
+							<p>ثبت نام راننده موتور</p>
+						</div>
+					</div>
+				</section>
+			</section>
+		</section>
+		<!-- ------------------------------- -->
+		<!-- ------ SERVICES SECTION-------- -->
+		<!-- ------------------------------- -->
+		<section class="services container" data-aos="fade-down">
+			<h2 class="services__title">سرویس‌های تپسی</h2>
+			<!-- -------------------------------------------------------------------------------- -->
+			<!-- ------------------------ tabs division of SERVICES SECTION --------------------- -->
+			<!-- -------------------------------------------------------------------------------- -->
+			<nav class="services__tabs">
+				<a class="tab active" data-tab-target="nav-classic-tab">
+					<img
+						class="tab__image"
+						src="./assets/multimedia/image/services tabs images/cc-classic.png"
+						alt="tapsi-classic-icon" />
+					<p class="tab__title">تپسی کلاسیک</p>
+				</a>
+				<a class="tab" data-tab-target="nav-tel-tab">
+					<img
+						class="tab__image"
+						src="./assets/multimedia/image/services tabs images/cc-tel.png"
+						alt="tapsi-tel-icon" />
+					<p class="tab__title">تپسی تلفنی</p>
+				</a>
+				<a class="tab" data-tab-target="nav-line-tab">
+					<img
+						class="tab__image"
+						src="./assets/multimedia/image/services tabs images/cc-line.png"
+						alt="tapsi-line-icon" />
+					<p class="tab__title">تپسی لاین</p>
+				</a>
+				<a class="tab" data-tab-target="nav-motopeyk-tab">
+					<img
+						class="tab__image"
+						src="./assets/multimedia/image/services tabs images/cc-motopeyk.png"
+						alt="motopeyk-icon" />
+					<p class="tab__title">موتوپیک</p>
+				</a>
+				<a class="tab" data-tab-target="nav-autopeyk-tab">
+					<img
+						class="tab__image"
+						src="./assets/multimedia/image/services tabs images/cc-autopeyk.png"
+						alt="autopeyk-icon" />
+					<p class="tab__title">اتوپیک</p>
+				</a>
+				<a class="tab" data-tab-target="nav-plus-tab">
+					<img
+						class="tab__image"
+						src="./assets/multimedia/image/services tabs images/cc-plus.png"
+						alt="tapsi-plus-icon" />
+					<p class="tab__title">تپسی پلاس</p>
+				</a>
+				<a class="tab" data-tab-target="nav-hamyar-tab">
+					<img
+						class="tab__image"
+						src="./assets/multimedia/image/services tabs images/cc-hamyar.png"
+						alt="hamyar-icon" />
+					<p class="tab__title">همیار</p>
+				</a>
+			</nav>
+			<!-- -------------------------------------------------------------------------------- -->
+			<!-- ----------------- information division of SERVICES SECTION --------------------- -->
+			<!-- -------------------------------------------------------------------------------- -->
+			<section class="services__info">
+				<div class="tab-content active" id="nav-classic-tab">
+					<div class="feature__image-container">
+						<img
+							class="feature__image-item"
+							src="./assets/multimedia/image/services tabs images/cc-classic.png"
+							alt="an image of an i-mac" />
+					</div>
+					<div class="feature__content">
+						<h3 class="feature__content__title">خدمات تپسی کلاسیک</h3>
+						<div class="feature__content__main">
+							لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
+							طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+							لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف
+						</div>
+					</div>
+				</div>
+				<div class="tab-content" id="nav-tel-tab">
+					<div class="feature__image-container">
+						<img
+							class="feature__image-item"
+							src="./assets/multimedia/image/services tabs images/cc-tel.png"
+							alt="an image of an i-mac" />
+					</div>
+					<div class="feature__content">
+						<h3 class="feature__content__title">خدمات تپسی تلفنی</h3>
+						<div class="feature__content__main">
+							لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
+							طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+							لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف
+						</div>
+					</div>
+				</div>
+				<div class="tab-content" id="nav-line-tab">
+					<div class="feature__image-container">
+						<img
+							class="feature__image-item"
+							src="./assets/multimedia/image/services tabs images/cc-line.png"
+							alt="an image of an i-mac" />
+					</div>
+					<div class="feature__content">
+						<h3 class="feature__content__title">خدمات تپسی لاین</h3>
+						<div class="feature__content__main">
+							لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
+							طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+							لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف
+						</div>
+					</div>
+				</div>
+				<div class="tab-content" id="nav-motopeyk-tab">
+					<div class="feature__image-container">
+						<img
+							class="feature__image-item"
+							src="./assets/multimedia/image/services tabs images/cc-motopeyk.png"
+							alt="an image of an i-mac" />
+					</div>
+					<div class="feature__content">
+						<h3 class="feature__content__title">خدمات تپسی موتوپیک</h3>
+						<div class="feature__content__main">
+							لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
+							طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+							لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف
+						</div>
+					</div>
+				</div>
+				<div class="tab-content" id="nav-autopeyk-tab">
+					<div class="feature__image-container">
+						<img
+							class="feature__image-item"
+							src="./assets/multimedia/image/services tabs images/cc-autopeyk.png"
+							alt="an image of an i-mac" />
+					</div>
+					<div class="feature__content">
+						<h3 class="feature__content__title">خدمات تپسی اتوپیک</h3>
+						<div class="feature__content__main">
+							لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
+							طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+							لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف
+						</div>
+					</div>
+				</div>
+				<div class="tab-content" id="nav-plus-tab">
+					<div class="feature__image-container">
+						<img
+							class="feature__image-item"
+							src="./assets/multimedia/image/services tabs images/cc-plus.png"
+							alt="an image of an i-mac" />
+					</div>
+					<div class="feature__content">
+						<h3 class="feature__content__title">خدمات تپسی پلاس</h3>
+						<div class="feature__content__main">
+							لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
+							طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+							لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف
+						</div>
+					</div>
+				</div>
+				<div class="tab-content" id="nav-hamyar-tab">
+					<div class="feature__image-container">
+						<img
+							class="feature__image-item"
+							src="./assets/multimedia/image/services tabs images/cc-hamyar.png"
+							alt="an image of an i-mac" />
+					</div>
+					<div class="feature__content">
+						<h3 class="feature__content__title">خدمات تپسی همیار</h3>
+						<div class="feature__content__main">
+							لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
+							طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+							لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف
+						</div>
+					</div>
+				</div>
+			</section>
+		</section>
+		<!-- -------------------------------- -->
+		<!-- ------ FEATURES SECTION -------- -->
+		<!-- -------------------------------- -->
+		<section class="feature container" data-aos="fade-right">
+			<div class="feature__image-container">
+				<img
+					class="feature__image-item"
+					src="/assets/multimedia/image/i-mac.webp"
+					alt="an image of an i-mac" />
+			</div>
+			<div class="feature__content">
+				<h2 class="feature__content__title">خدمات تپسی برای کسب و کارها</h2>
+				<div class="feature__content__main">
+					لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
+					طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+					لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود
+					ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده،
+					شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت
+				</div>
+				<button class="btn btn--primary feature__content__button">
+					ورود و ثبت نام پنل سازمانی
+				</button>
+			</div>
+		</section>
+		<section class="feature feature--reverse-direction container" data-aos="fade-left">
+			<div class="feature__image-container">
+				<img
+					class="feature__image-item"
+					src="/assets/multimedia/image/i-mac.webp"
+					alt="an image of an i-mac" />
+			</div>
+			<div class="feature__content">
+				<h2 class="feature__content__title">خدمات تپسی برای کسب و کارها</h2>
+				<div class="feature__content__main">
+					لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
+					طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+					لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود
+					ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده،
+					شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت
+				</div>
+				<button class="btn btn--primary feature__content__button">
+					ورود و ثبت نام پنل سازمانی
+				</button>
+			</div>
+		</section>
+		<!-- ------------------------------- -->
+		<!-- ------- PLANS SECTION --------- -->
+		<!-- ------------------------------- -->
+		<section class="plans container" data-aos="fade-right">
+			<h2>انواع پلن‌های تپسی</h2>
+			<article class="plan-container">
+				<div class="plan">
+					<div class="plan__header plan__header--secondary">
+						<div class="plan__header__title">
+							<span class="plan__name">عادی</span>
+							<span class="badge badge--secondary plan--discount">10% OFF</span>
+						</div>
+						<span class="plan__price">290,000</span>
+						<span class="plan__billing-cycle">ماهانه / تومان</span>
+						<div class="plan__description">سرویس های ماشین های معمولی</div>
+					</div>
+					<div class="plan__main">
+						<ul class="list list--vertical">
+							<li class="list--vertical__item">
+								<i
+									class="fa fa-check fa-lg list--vertical__item__i"
+									aria-hidden="true"></i>
+								<span> کیفیت عالی و بارز </span>
+							</li>
+							<li class="list--vertical__item">
+								<i
+									class="fa fa-check fa-lg list--vertical__item__i"
+									aria-hidden="true"></i>
+								<span> کیفیت عالی و بارز </span>
+							</li>
+							<li class="list--vertical__item">
+								<i
+									class="fa fa-check fa-lg list--vertical__item__i"
+									aria-hidden="true"></i>
+								<span> کیفیت عالی و بارز </span>
+							</li>
+							<li class="list--vertical__item">
+								<i
+									class="fa fa-check fa-lg list--vertical__item__i"
+									aria-hidden="true"></i>
+								<span> کیفیت عالی و بارز </span>
+							</li>
+						</ul>
+						<button class="btn btn--secondary btn--block plan--order-registration">
+							ثبت سفارش
+						</button>
+					</div>
+				</div>
+				<div class="plan plan--popular">
+					<div class="plan__header plan__header--primary">
+						<div class="plan__header__title">
+							<span class="plan__name">عادی</span>
+							<span class="badge badge--primary plan--discount">10% OFF</span>
+						</div>
+						<span class="plan__price">290,000</span>
+						<span class="plan__billing-cycle">ماهانه / تومان</span>
+						<div class="plan__description">سرویس های ماشین های معمولی</div>
+					</div>
+					<div class="plan__main">
+						<ul class="list list--vertical">
+							<li class="list--vertical__item">
+								<i
+									class="fa fa-check fa-lg list--vertical__item__i"
+									aria-hidden="true"></i>
+								<span> کیفیت عالی و بارز </span>
+							</li>
+							<li class="list--vertical__item">
+								<i
+									class="fa fa-check fa-lg list--vertical__item__i"
+									aria-hidden="true"></i>
+								<span> کیفیت عالی و بارز </span>
+							</li>
+							<li class="list--vertical__item">
+								<i
+									class="fa fa-check fa-lg list--vertical__item__i"
+									aria-hidden="true"></i>
+								<span> کیفیت عالی و بارز </span>
+							</li>
+							<li class="list--vertical__item">
+								<i
+									class="fa fa-check fa-lg list--vertical__item__i"
+									aria-hidden="true"></i>
+								<span> کیفیت عالی و بارز </span>
+							</li>
+						</ul>
+						<button class="btn btn--primary btn--block plan--order-registration">
+							ثبت سفارش
+						</button>
+					</div>
+				</div>
+				<div class="plan">
+					<div class="plan__header plan__header--secondary">
+						<div class="plan__header__title">
+							<span class="plan__name">عادی</span>
+							<span class="badge badge--secondary plan--discount">10% OFF</span>
+						</div>
+						<span class="plan__price">290,000</span>
+						<span class="plan__billing-cycle">ماهانه / تومان</span>
+						<div class="plan__description">سرویس های ماشین های معمولی</div>
+					</div>
+					<div class="plan__main">
+						<ul class="list list--vertical">
+							<li class="list--vertical__item">
+								<i
+									class="fa fa-check fa-lg list--vertical__item__i"
+									aria-hidden="true"></i>
+								<span> کیفیت عالی و بارز </span>
+							</li>
+							<li class="list--vertical__item">
+								<i
+									class="fa fa-check fa-lg list--vertical__item__i"
+									aria-hidden="true"></i>
+								<span> کیفیت عالی و بارز </span>
+							</li>
+							<li class="list--vertical__item">
+								<i
+									class="fa fa-check fa-lg list--vertical__item__i"
+									aria-hidden="true"></i>
+								<span> کیفیت عالی و بارز </span>
+							</li>
+							<li class="list--vertical__item">
+								<i
+									class="fa fa-check fa-lg list--vertical__item__i"
+									aria-hidden="true"></i>
+								<span> کیفیت عالی و بارز </span>
+							</li>
+						</ul>
+						<button class="btn btn--secondary btn--block plan--order-registration">
+							ثبت سفارش
+						</button>
+					</div>
+				</div>
+			</article>
+		</section>
+		<!-- ---------------------------------- -->
+		<!-- ----- CONTACT-US SECTION --------- -->
+		<!-- ---------------------------------- -->
+		<section class="contact-us container" data-aos="fade-left">
+			<header class="contact-us__header">
+				<h2 class="contact-us__header--title">ارتباط با ما</h2>
+				<p class="contact-us__header--text">
+					شما می‌توانید نظرات و انتقادات خود را برای ما ارسال کنید.
+				</p>
+			</header>
+			<section class="contact-us__content">
+				<div class="contact-us__social-media">
+					<span class="icon-container">
+						<svg class="icon">
+							<use
+								xlink:href="./assets/multimedia/image/social media icons/svg-sprite.svg#linkedin"></use>
+						</svg>
+					</span>
+					<span class="icon-container">
+						<svg class="icon">
+							<use
+								xlink:href="./assets/multimedia/image/social media icons/svg-sprite.svg#facebook"></use>
+						</svg>
+					</span>
+					<span class="icon-container">
+						<svg class="icon">
+							<use
+								xlink:href="./assets/multimedia/image/social media icons/svg-sprite.svg#twitter"></use>
+						</svg>
+					</span>
+				</div>
+				<div class="contact-us__map">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1160771.5594962705!2d-17.512397526026174!3d64.90913976080546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2suk!4v1707672755535!5m2!1sen!2suk"
+						width="600"
+						height="400"
+						style="border: 0"
+						allowfullscreen=""
+						loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+				<ul class="contact-us__communication-ways">
+					<li class="contact-us__location">
+						<span class="icon-container">
+							<svg class="icon">
+								<use
+									xlink:href="./assets/multimedia/image/contact-us icons/svg-sprite.svg#location"></use>
+							</svg>
+						</span>
+						<span class="contact-us__location__info">
+							6386 Spring St undefined Anchorage, Georgia 12473 United States
+						</span>
+					</li>
+					<li class="contact-us__telephone">
+						<span class="icon-container">
+							<svg class="icon">
+								<use
+									xlink:href="./assets/multimedia/image/contact-us icons/svg-sprite.svg#telephone"></use>
+							</svg>
+						</span>
+						<span class="contact-us__telephone__info"> (843) 555-0130 </span>
+					</li>
+					<li class="contact-us__email">
+						<span class="icon-container">
+							<svg class="icon">
+								<use
+									xlink:href="./assets/multimedia/image/contact-us icons/svg-sprite.svg#email"></use>
+							</svg>
+						</span>
+						<span class="contact-us__email__info">tren_alex@gmail.com</span>
+					</li>
+				</ul>
+			</section>
+			<section class="contact-us__form-container">
+				<h2>نظرات شما</h2>
+				<form class="contact-us__form" action="#" method="post">
+					<input
+						class="contact-us__form__input"
+						type="text"
+						name="name"
+						placeholder="نام خود را وارد کنید" />
+					<input
+						class="contact-us__form__input"
+						type="text"
+						name="family"
+						placeholder="نام خانوادگی خود را وارد کنید" />
+					<input
+						class="contact-us__form__input"
+						type="email"
+						name="email"
+						placeholder="ایمیل خود را وارد نمایید" />
+					<textarea
+						class="contact-us__form--textarea"
+						name="comment"
+						cols="30"
+						rows="10"></textarea>
+					<input
+						class="btn btn--primary contact-us__form--submit"
+						type="submit"
+						value="ارسال" />
+				</form>
+			</section>
+		</section>
+		<!-- ---------------------------------- -->
+		<!-- ------- TRAVEL SECTION ----------- -->
+		<!-- ---------------------------------- -->
+		<section class="travel container">
+			<h2 class="travel__heading">جوایز ویژه</h2>
+			<section class="trip-container">
+				<div class="trip">
+					<img
+						class="trip__image"
+						src="./assets/multimedia/image/travelling.svg"
+						alt="a van in desert image" />
+					<div class="trip__content">
+						<header class="trip__details">
+							<span class="badge badge--primary">ویژه</span>
+							<p class="trip__details--text">اقامت رایگان &#8226; سفر 3 روزه</p>
+						</header>
+						<main class="trip__title">سفر به قلب کویر لوت</main>
+						<section class="trip__contribution">
+							<section class="trip__feedback">
+								<i class="fas fa-heart"></i>
+								<span>20</span>
+								<i class="far fa-eye"></i>
+								<span>100</span>
+							</section>
+							<section class="trip__action">
+								<i class="far fa-edit"></i>
+								<i class="far fa-trash-alt"></i>
+							</section>
+						</section>
+						<section class="avatar-group">
+							<div class="avatar">
+								<img
+									class="avatar__image"
+									src="./assets/multimedia/image/5.jpg"
+									alt="avatar photo" />
+							</div>
+							<div class="avatar">
+								<img
+									class="avatar__image"
+									src="./assets/multimedia/image/5.jpg"
+									alt="avatar photo" />
+							</div>
+							<div class="avatar">
+								<img
+									class="avatar__image"
+									src="./assets/multimedia/image/5.jpg"
+									alt="avatar photo" />
+							</div>
+							<div class="hidden-avatars">+10</div>
+							<span class="trip__suggest">پیشنهاد</span>
+						</section>
+					</div>
+				</div>
+				<div class="trip">
+					<img
+						class="trip__image"
+						src="./assets/multimedia/image/travelling.svg"
+						alt="a van in desert image" />
+					<div class="trip__content">
+						<header class="trip__details">
+							<span class="badge badge--primary">ویژه</span>
+							<p class="trip__details--text">اقامت رایگان &#8226; سفر 3 روزه</p>
+						</header>
+						<main class="trip__title">سفر به قلب کویر لوت</main>
+						<section class="trip__contribution">
+							<section class="trip__feedback">
+								<i class="fas fa-heart"></i>
+								<span>12</span>
+								<i class="far fa-eye"></i>
+								<span>46</span>
+							</section>
+							<section class="trip__action">
+								<i class="far fa-edit"></i>
+								<i class="far fa-trash-alt"></i>
+							</section>
+						</section>
+						<section class="avatar-group">
+							<div class="avatar">
+								<img
+									class="avatar__image"
+									src="./assets/multimedia/image/5.jpg"
+									alt="avatar photo" />
+							</div>
+							<div class="avatar">
+								<img
+									class="avatar__image"
+									src="./assets/multimedia/image/5.jpg"
+									alt="avatar photo" />
+							</div>
+							<div class="avatar">
+								<img
+									class="avatar__image"
+									src="./assets/multimedia/image/5.jpg"
+									alt="avatar photo" />
+							</div>
+							<div class="hidden-avatars">+10</div>
+							<span class="trip__suggest">پیشنهاد</span>
+						</section>
+					</div>
+				</div>
+				<div class="trip">
+					<img
+						class="trip__image"
+						src="./assets/multimedia/image/travelling.svg"
+						alt="a van in desert image" />
+					<div class="trip__content">
+						<header class="trip__details">
+							<span class="badge badge--primary">ویژه</span>
+							<p class="trip__details--text">اقامت رایگان &#8226; سفر 3 روزه</p>
+						</header>
+						<main class="trip__title"><h3>سفر به قلب کویر لوت</h3></main>
+						<section class="trip__contribution">
+							<section class="trip__feedback">
+								<i class="fas fa-heart"></i>
+								<span>15</span>
+								<i class="far fa-eye"></i>
+								<span>40</span>
+							</section>
+							<section class="trip__action">
+								<i class="far fa-edit"></i>
+								<i class="far fa-trash-alt"></i>
+							</section>
+						</section>
+						<section class="avatar-group">
+							<div class="avatar">
+								<img
+									class="avatar__image"
+									src="./assets/multimedia/image/5.jpg"
+									alt="avatar photo" />
+							</div>
+							<div class="avatar">
+								<img
+									class="avatar__image"
+									src="./assets/multimedia/image/5.jpg"
+									alt="avatar photo" />
+							</div>
+							<div class="avatar">
+								<img
+									class="avatar__image"
+									src="./assets/multimedia/image/5.jpg"
+									alt="avatar photo" />
+							</div>
+							<div class="hidden-avatars">+10</div>
+							<span class="trip__suggest">پیشنهاد</span>
+						</section>
+					</div>
+				</div>
+				<div class="trip">
+					<img
+						class="trip__image"
+						src="./assets/multimedia/image/travelling.svg"
+						alt="a van in desert image" />
+					<div class="trip__content">
+						<header class="trip__details">
+							<span class="badge badge--primary">ویژه</span>
+							<p class="trip__details--text">اقامت رایگان &#8226; سفر 3 روزه</p>
+						</header>
+						<main class="trip__title"><h3>سفر به قلب کویر لوت</h3></main>
+						<section class="trip__contribution">
+							<section class="trip__feedback">
+								<i class="fas fa-heart"></i>
+								<span>15</span>
+								<i class="far fa-eye"></i>
+								<span>40</span>
+							</section>
+							<section class="trip__action">
+								<i class="far fa-edit"></i>
+								<i class="far fa-trash-alt"></i>
+							</section>
+						</section>
+						<section class="avatar-group">
+							<div class="avatar">
+								<img
+									class="avatar__image"
+									src="./assets/multimedia/image/5.jpg"
+									alt="avatar photo" />
+							</div>
+							<div class="avatar">
+								<img
+									class="avatar__image"
+									src="./assets/multimedia/image/5.jpg"
+									alt="avatar photo" />
+							</div>
+							<div class="avatar">
+								<img
+									class="avatar__image"
+									src="./assets/multimedia/image/5.jpg"
+									alt="avatar photo" />
+							</div>
+							<div class="hidden-avatars">+10</div>
+							<span class="trip__suggest">پیشنهاد</span>
+						</section>
+					</div>
+				</div>
+			</section>
+		</section>
+		<!-- ----------------------------------- -->
+		<!-- ----- ACCORDION SECTION ----------- -->
+		<!-- ----------------------------------- -->
+		<!-- <section class="container">
+			<div class="accordion-container">
+				<div class="accordion__introduction">
+					<h2 class="accordion__heading">رزومه و سوابق</h2>
+					<span>
+						<span>ویرایش</span>
+						<span>
+							<i class="far fa-edit"></i>
+						</span>
+					</span>
+				</div>
+				<div class="accordion">
+					<header class="accordion__header">
+						<h2 class="accordion__heading">سابقه تحصیلی</h2>
+						<span class="icon">
+							<i class="fas fa-chevron-circle-down fa-lg"></i>
+						</span>
+					</header>
+					<section class="accordion__content">
+						<p>محتوای قابل نمایش</p>
+					</section>
+				</div>
+				<div class="accordion">
+					<header class="accordion__header">
+						<h2 class="accordion__heading">سابقه تحصیلی</h2>
+						<span class="icon">
+							<i class="fas fa-chevron-circle-down fa-lg"></i>
+						</span>
+					</header>
+					<section class="accordion__content">
+						<p>محتوای قابل نمایش</p>
+					</section>
+				</div>
+			</div>
+		</section> -->
+		<!-------------------------------------- -->
+		<!-- ------- RADIO-BUTTON SECTION ------ -->
+		<!-- ----------------------------------- -->
+		<section class="container">
+			<div class="select-type">
+				<div class="select-control">
+					<input type="radio" name="webinar" id="type-A" />
+					<label for="type-A">عمومی</label>
+				</div>
+				<div class="select-control">
+					<input type="radio" name="webinar" id="type-B" />
+					<label for="type-B">تخصصی</label>
+				</div>
+			</div>
+		</section>
+		<!-- ---------------------------------- -->
+		<!-- ----------- FOOTER --------------- -->
+		<!-- ---------------------------------- -->
+		<footer class="footer__container--outer">
+			<section class="footer__container--inner container">
+				<header class="footer__header">
+					<h2 class="footer__header--heading">تپسی</h2>
+					<p>اپلیکیشن درخواست خودرو و پیک</p>
+					<div class="footer__copy-right--top">
+						تمامی حقوق مادی و معنوی این وبسایت متعلق به تپسی است.
+					</div>
+				</header>
+				<section class="footer__tapsi">
+					<h2 class="footer__tapsi--heading">تپسی</h2>
+					<ul class="footer__tapsi__list">
+						<li><a href="#" target="_blank">وبلاگ تپسی</a></li>
+						<li><a href="#" target="_blank">فرصت شغلی</a></li>
+						<li><a href="#" target="_blank">تماس با ما</a></li>
+						<li><a href="#" target="_blank">لوگو و هویت سازمانی</a></li>
+					</ul>
+				</section>
+				<section class="footer__passengers">
+					<h2 class="footer__passengers--heading">مسافران</h2>
+					<ul class="footer__passengers__list">
+						<li><a href="#" target="_blank">دانلود اپ مسافر</a></li>
+						<li><a href="#" target="_blank">نسخه وب تپسی</a></li>
+						<li><a href="#" target="_blank">پرسش‌های متداول مسافران</a></li>
+						<li><a href="#" target="_blank">باشگاه مشتریان</a></li>
+					</ul>
+				</section>
+				<section class="footer__drivers">
+					<h2 class="footer__drivers--heading">رانندگان</h2>
+					<ul class="footer__drivers__list">
+						<li><a href="#" target="_blank">ثبت نام راننده تاکسی اینترنتی</a></li>
+						<li><a href="#" target="_blank">دانلود اپ سفیر</a></li>
+						<li><a href="#" target="_blank">پرسش‌های متداول سفیران</a></li>
+						<li><a href="#" target="_blank">باشگاه سفیران</a></li>
+					</ul>
+				</section>
+				<section class="footer__businesses">
+					<h2 class="footer__businesses--heading">کسب و کارها</h2>
+					<ul class="footer__businesses__list">
+						<li><a href="#" target="_blank">پنل سازمانی تپسی</a></li>
+						<li><a href="#" target="_blank">خرید کد اعتبار و تخفیف</a></li>
+						<li><a href="#" target="_blank">دریافت API</a></li>
+						<li><a href="#" target="_blank">شرایط و قوانین</a></li>
+					</ul>
+				</section>
+				<section class="footer__certificates-container">
+					<div class="footer__certificate footer__certificate--primary">
+						<img
+							class="footer__certificate--enamad"
+							src="./assets/multimedia/image/enamad.webp"
+							alt="enamad certificate" />
+					</div>
+					<div class="footer__certificate">
+						<img
+							class="footer__certificate--enamad"
+							src="./assets/multimedia/image/enamad.webp"
+							alt="enamad certificate" />
+					</div>
+					<div class="footer__certificate">
+						<img
+							class="footer__certificate--enamad"
+							src="./assets/multimedia/image/enamad.webp"
+							alt="enamad certificate" />
+					</div>
+				</section>
+				<section class="footer__copy-right--bottom">
+					تمامی حقوق مادی و معنوی این وبسایت متعلق به تپسی است.
+				</section>
+				<section class="footer__social-media">
+					<p class="footer__social-media--title">تپسی در شبکه‌های اجتماعی</p>
+					<svg class="footer__social-media--icon">
+						<use
+							xlink:href="./assets/multimedia/image/footer section_ social media icons/svg-sprite.svg#telegram"></use>
+					</svg>
+					<svg class="footer__social-media--icon">
+						<use
+							xlink:href="./assets/multimedia/image/footer section_ social media icons/svg-sprite.svg#instagram"></use>
+					</svg>
+					<svg class="footer__social-media--icon">
+						<use
+							xlink:href="./assets/multimedia/image/footer section_ social media icons/svg-sprite.svg#facebook"></use>
+					</svg>
+					<svg class="footer__social-media--icon">
+						<use
+							xlink:href="./assets/multimedia/image/footer section_ social media icons/svg-sprite.svg#linkedin"></use>
+					</svg>
+					<svg class="footer__social-media--icon">
+						<use
+							xlink:href="./assets/multimedia/image/footer section_ social media icons/svg-sprite.svg#twitter"></use>
+					</svg>
+				</section>
+			</section>
+		</footer>
+		<!-- ---------------------------------- -->
+		<!-- ---------------------------------- -->
+		<!-- ---------------------------------- -->
+		<script src="assets/js/main.js"></script>
+		<!-- to show persian digits correctly  --->
+		<script src="assets/js/PersianDigits.js"></script>
+		<!-- ----------- AOS CDN LINK --------- -->
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
+		<!-- ---------------------------------- -->
+	</body>
+</html>

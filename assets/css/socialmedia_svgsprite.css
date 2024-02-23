@@ -1,0 +1,14 @@
+span.icon-holder-socialmedia {
+	background: #c9c7c7;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 4rem;
+}
+
+svg.icon-socialmedia {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 198px;
+}
